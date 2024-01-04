@@ -20,7 +20,7 @@ li {
     float: left;
 }
 
-.listaM {
+.ListaM {
     display: block;
     color: white;
     text-align: center;
@@ -29,7 +29,7 @@ li {
 }
 
 /* Cambiar color de enlace al pasar el mouse */
-.listaM:hover {
+.ListaM:hover {
     background-color: #b3bd75;
 }
 

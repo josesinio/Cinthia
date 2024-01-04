@@ -8,22 +8,7 @@
     <title>Index</title>
 </head>
 <body>
-    <div class="Menu">
-        <h1>Bienvenidos</h1>
-    </div>
-    <nav>
-        <ul class="MenuH" >
-            <li>
-                <a class="ListaM" href="Index.html">Inicio</a>
-            </li>
-            <li>
-                <a class="ListaM" href="Acerca.html">Acerca de</a>
-            </li>
-            <li>
-                <a class="ListaM" href="Contacto.html">Contacto</a>
-            </li>
-        </ul>
-    </nav>
+
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
 <script>
     const socket = io('http://localhost:3000', { transports: ['websocket'] });
@@ -36,5 +21,23 @@ socket.on('mensaje', (data) => {
   console.log('Mensaje del servidor:', data);
 });
 </script>
+
+<div class="Menu">
+
+    <h1>Bienvenidos</h1>
+</div>
+<nav>
+    <ul class="MenuH" >
+        <li>
+            <a class="ListaM" href="Index.html">Inicio</a>
+        </li>
+        <li>
+            <a class="ListaM" href="Acerca.html">Acerca de</a>
+        </li>
+        <li>
+            <a class="ListaM" href="Contacto.html">Contacto</a>
+        </li>
+    </ul>
+</nav>
 </body>
 </html>
