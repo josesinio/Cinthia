@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="Menu">
-        <h1>Bienvenidos</h1>
+        <h1>Acerca de</h1>
     </div>
     <nav>
         <ul class="MenuH" >
@@ -23,17 +23,6 @@
             </li>
         </ul>
     </nav>
-    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
-<script>
-    const socket = io('http://localhost:3000', { transports: ['websocket'] });
 
-// Enviar un mensaje al servidor
-socket.emit('mensaje', 'Hola, servidor!');
-
-// Escuchar eventos del servidor
-socket.on('mensaje', (data) => {
-  console.log('Mensaje del servidor:', data);
-});
-</script>
 </body>
 </html>

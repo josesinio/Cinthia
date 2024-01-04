@@ -1,0 +1,102 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color:#048390;
+}
+
+.MenuH{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+.listaM {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Cambiar color de enlace al pasar el mouse */
+.listaM:hover {
+    background-color: #b3bd75;
+}
+
+.Menu{
+    background-color: #048390;
+}
+.logo {
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+}
+div h1{
+    background-color: #048390; 
+    padding:   20px;
+    overflow: hidden; 
+    color: white; 
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  footer {
+    background-color: #048390;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #555;
+  }
