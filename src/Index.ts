@@ -34,7 +34,7 @@ import express, { Request, Response, NextFunction } from "express";
     }
   }
 
-  server.on('char massage', (mensaje : string)=> {
+  server.on('chat massage', (mensaje : string)=> {
     const mensajeChat = document.getElementById('chat-messages');
     const nuevoMensaje = document.createElement('div');
     nuevoMensaje.textContent = mensaje;
