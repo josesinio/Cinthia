@@ -1,3 +1,4 @@
+import { Socket } from "dgram";
 import { Request, Response, NextFunction } from "express";
 
   const { Server } = require('socket.io');
@@ -20,6 +21,27 @@ import { Request, Response, NextFunction } from "express";
     res.send('Hola que tal!');
   
   });
+
+  function MandarMensaje() {
+    const mensajeInput = document.getElementById('message-input') as HTMLInputElement;
+    const mensaje = mensajeInput.value.trim();
+
+    if(mensaje)
+    {
+      server.emit('chat message',mensaje)
+
+      mensajeInput.value = '';
+    }
+  }
+
+  server.on('char massage', (mensaje : string)=> {
+    const mensajeChat = document.getElementById('chat-messages');
+    const nuevoMensaje = document.createElement('div');
+    nuevoMensaje.textContent = mensaje;
+    if (mensajeChat !== null) {
+    mensajeChat.appendChild(nuevoMensaje);
+    }
+  })
 
   io.on('connection', (socket  = io('http://localhost:3000'))  => {
 
