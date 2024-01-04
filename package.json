@@ -1,6 +1,7 @@
 {
+  "type": "commonjs",
   "scripts": {
-    "start": "ts-node src/Index.ts"
+    "start": "tsc && node src/Index.js "
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -9,6 +10,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
+  
   "devDependencies": {
     "@types/express": "^4.17.21"
   }

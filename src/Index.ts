@@ -1,9 +1,9 @@
-import { Socket } from "dgram";
-import { Request, Response, NextFunction } from "express";
+import express, { Request, Response, NextFunction } from "express";
+
 
   const { Server } = require('socket.io');
   const http = require('http');
-  const express = require('express');
+
 
   const app = express();
   const server = http.createServer(app);
@@ -22,7 +22,7 @@ import { Request, Response, NextFunction } from "express";
   
   });
 
-  function MandarMensaje() {
+   function MandarMensaje() {
     const mensajeInput = document.getElementById('message-input') as HTMLInputElement;
     const mensaje = mensajeInput.value.trim();
 
