@@ -1,8 +1,12 @@
 {
+  "name": "Cinthia",
   "type": "commonjs",
+  "main": "dist/Index.js",
   "scripts": {
-    "start": "tsc && node src/Index.js "
+    "start": "tsc && node dist/Index.js "
   },
+  "author": "jose cruz",
+
   "dependencies": {
     "express": "^4.18.2",
     "socket.io": "^4.7.3",
