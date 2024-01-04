@@ -39,5 +39,16 @@ socket.on('mensaje', (data) => {
         </li>
     </ul>
 </nav>
+<div id="contenedorChat">
+<div id="mensajesChat"></div>
+<div id="formularioChat">
+
+    <input type="text" id="Mensajeinput" placeholder="Escribe tu mensaje"> 
+    <button onclick="sendMensage()" class="EnviarBoton">Envian</button>
+
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.2/socket.io.js"></script>
+<script src="Index.ts"></script>
 </body>
 </html>

@@ -100,3 +100,36 @@ body {
   button:hover {
     background-color: #555;
   }
+  #chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  #chat-messages {
+    max-height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  #chat-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  #message-input {
+    flex-grow: 1;
+    padding: 5px;
+  }
+  
+  .EnviarBoton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
