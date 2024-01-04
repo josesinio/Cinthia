@@ -17,6 +17,7 @@ import { Request, Response, NextFunction } from "express";
 
   app.get('/', (req : Request, res: Response) => {
     res.send('Hola que tal!');
+  
   });
 
   io.on('connection', (socket  = io('http://localhost:3000'))  => {
