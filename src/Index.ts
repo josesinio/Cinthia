@@ -1,7 +1,8 @@
 import express, { Request, Response, NextFunction } from "express";
 
-
+export  default express
   const { Server } = require('socket.io');
+  const path = require('path');
   const http = require('http');
 
 
@@ -11,6 +12,8 @@ import express, { Request, Response, NextFunction } from "express";
   const port = 3000;
 
 
+  app.use(express.static(path.join(__dirname, 'public')));
+
   app.use((req: Request, res : Response, next: NextFunction) => {
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -19,6 +22,7 @@ import express, { Request, Response, NextFunction } from "express";
 
   app.get('/', (req : Request, res: Response) => {
     res.send('Hola que tal!');
+    res.sendFile(path.join(__dirname, 'public', 'Index.html'))
   
   });
 

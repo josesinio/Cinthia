@@ -1,5 +1,4 @@
 {
-  "name": "Cinthia",
   "type": "commonjs",
   "main": "dist/Index.js",
   "scripts": {
