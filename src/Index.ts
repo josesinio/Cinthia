@@ -12,7 +12,7 @@ export  default express
   const port = 3000;
 
 
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join( 'public')));
 
   app.use((req: Request, res : Response, next: NextFunction) => {
     res.setHeader('Cache-Control', 'no-store');
@@ -22,7 +22,7 @@ export  default express
 
   app.get('/', (req : Request, res: Response) => {
     res.send('Hola que tal!');
-    res.sendFile(path.join(__dirname, 'public', 'Index.html'))
+    res.sendFile(path.join( 'public', 'Index.html'))
   
   });
 
@@ -37,6 +37,9 @@ export  default express
       mensajeInput.value = '';
     }
   }
+  // Agrega esto después de configurar express.static
+    console.log('Ruta de archivos estáticos:', path.join( 'public'));
+
 
   server.on('chat massage', (mensaje : string)=> {
     const mensajeChat = document.getElementById('chat-messages');
