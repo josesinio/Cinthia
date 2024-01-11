@@ -126,7 +126,7 @@ body {
     padding: 5px;
   }
   
-  .EnviarBoton {
+  #EnviarBoton {
     padding: 5px 10px;
     background-color: #007bff;
     color: #fff;
