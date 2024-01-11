@@ -121,7 +121,7 @@ body {
     margin-top: 10px;
   }
   
-  #mensajeinput {
+  #message-input {
     flex-grow: 1;
     padding: 5px;
   }

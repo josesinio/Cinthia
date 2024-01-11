@@ -1,5 +1,5 @@
 {
-  "type": "commonjs",
+
   "main": "dist/Index.js",
   "scripts": {
     "start": "tsc && node dist/Index.js "
