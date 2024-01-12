@@ -44,16 +44,13 @@ socket.on('mensaje', (data) => {
     
     const server = socket; // server ahora está disponible globalmente
   
-    $('form').submit(function(){
-      server.emit('chat message', $('#message-input').val());
-      $('#message-input').val('');
-      return false;
-    });
+
   
     socket.on('chat message', function(msg){
       $('#messages').append($('<li>').text(msg));
     });
   </script>
+
 
 
 
@@ -65,11 +62,31 @@ socket.on('mensaje', (data) => {
     <button onclick="MandarMensaje()" id="EnviarBoton">Enviar</button>
     <script src="/Index.js" ></script>
 
-        
-
-
 </div>
 </div>
+ <script>
+    $('form').submit(function () {
+        const mensaje = $('#message-input').val();
+        if (mensaje) {
+            MandarMensaje(mensaje);
+            $('#message-input').val('');
+        }
+        return false;
+    });
+
+    socket.on('chat message', function (usuario, mensaje) {
+        mostrarMensaje(usuario, mensaje);
+    });
+
+    function MandarMensaje(mensaje) {
+        mostrarMensaje('Tú', mensaje);
+        socket.emit('mensaje', mensaje);
+    }
+
+    function mostrarMensaje(usuario, mensaje) {
+        $('#mensajesChat').append($('<p>').html(`<strong>${usuario}:</strong> ${mensaje}`));
+    }
+</script>
 
 </body>
 </html>

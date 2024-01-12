@@ -40,16 +40,13 @@ ioserver.on('connection', (socket) => {
   });
 });
 
-export function MandarMensaje() {
-  const mensajeInput = document.getElementById('message-input') as HTMLInputElement;
-  const mensaje = mensajeInput.value.trim();
 
-  if (mensaje) {
-    ioserver.emit('chat message', mensaje);
-    mensajeInput.value = '';
-  }
-}
+server.on('chat message', (mensaje: string) => {
+  // En este ejemplo, asumimos que el usuario es anónimo. Puedes ajustar esto según tu autenticación.
+  const usuario = 'Anónimo';
+  server.emit('chat message', usuario, mensaje);
+});
 
 server.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
-});
+})
